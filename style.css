@@ -1,0 +1,211 @@
+/* NKU Data Science Club CSS */
+
+:root {
+    --nku-gold: #C8A742;
+    --nku-black: #000000;
+    --nku-white: #FFFFFF;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--nku-white);
+    color: var(--nku-black);
+  }
+  
+  header {
+    background-color: #001f3f;
+    color: var(--nku-white);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    max-height: 60px;
+  }
+  
+  nav {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    color: var(--nku-white);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    color: var(--nku-gold);
+  }
+  
+  .intro, .project, .contact {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .intro-heading, .pictures-heading, .project-heading, .contact-heading {
+    color: var(--nku-gold);
+  }
+  
+  .pictures {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .pictures-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .pictures-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .image-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  
+  .image-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--nku-white);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .image-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .project-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .project-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  .project-card h3 {
+    margin: 16px 0 8px;
+  }
+  .project-card p {
+    margin: 0 0 16px;
+  }
+  .project-card button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .project-card button:hover {
+    background-color: #0056b3;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--nku-black);
+  }
+  
+  .contact-form button {
+    background-color: var(--nku-gold);
+    color: var(--nku-black);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: var(--nku-black);
+    color: var(--nku-gold);
+  }
+  
+  footer {
+    background-color: var(--nku-black);
+    color: var(--nku-white);
+    text-align: center;
+    padding: 1rem;
+  }
+
