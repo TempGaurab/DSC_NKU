@@ -156,6 +156,62 @@
     width: 80%;
     border-radius: 8px;
   }
+
+  .sisterorg {
+    background-color: #001f3f;
+    color: var(--nku-white);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .sisterorg-heading {
+    color: var(--nku-gold);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sisterorg p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .sisterorg button {
+    background-color: var(--nku-gold);
+    color: var(--nku-black);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .sisterorg button:hover {
+    background-color: var(--nku-white);
+    color: var(--nku-black);
+  }
+  
+
+  @media (max-width: 768px) {
+    .sisterorg {
+      padding: 2rem 1rem;
+    }
+  
+    .sisterorg-heading {
+      font-size: 2rem;
+    }
+  
+    .sisterorg p {
+      font-size: 1rem;
+    }
+  
+    .sisterorg button {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+
   .close {
     color: #aaa;
     float: right;
