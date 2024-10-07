@@ -209,6 +209,20 @@
     picturesContainer.addEventListener("mouseenter", stopSlideshow);
     picturesContainer.addEventListener("mouseleave", startSlideshow);
 
-    // Rest of the JavaScript remains the same
+    function showModal(title, description) {
+      document.getElementById("modal-title").innerText = title;
+      document.getElementById("modal-description").innerText = description;
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == document.getElementById("myModal")) {
+        closeModal();
+      }
+    };
   </script>
 </html>
