@@ -38,11 +38,7 @@
     <section class="pictures" id="pictures">
       <h1 class="pictures-heading">Gallery</h1>
       <div class="pictures-container">
-        <img id="galleryImage" src="images/1.jpg" alt="Gallery Image" />
-        <img id="galleryImage" src="images/2.jpg" alt="Gallery Image" />
-        <img id="galleryImage" src="images/3.jpg" alt="Gallery Image" />
-        <img id="galleryImage" src="images/4.jpg" alt="Gallery Image" />
-        <img id="galleryImage" src="images/5.jpg" alt="Gallery Image" />
+        <img id="galleryImage" src="" alt="Gallery Image" />
         <div class="image-controls">
           <button id="prevBtn">&lt;</button>
           <button id="nextBtn">&gt;</button>
@@ -150,9 +146,8 @@
   </body>
   <script>
     const images = [
-      "images/1.jpg",
-      "images/2.jpg",
-      "images/3.jpg",
+      "https://utfs.io/f/alMZB5gCXzuS8AX74pIXk8ZHML7aQSTFONrRA9jI0KJ3UCDw",
+      "",
       "images/4.jpg",
       "images/5.jpg",
     ];
@@ -160,19 +155,41 @@
     const imageElement = document.getElementById("galleryImage");
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
+    let slideInterval;
 
     function updateImage() {
       imageElement.src = images[currentIndex];
     }
 
-    prevBtn.addEventListener("click", () => {
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateImage();
+    }
+
+    function prevImage() {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       updateImage();
+    }
+
+    function startSlideshow() {
+      stopSlideshow(); // Clear any existing interval
+      slideInterval = setInterval(nextImage, 5000); // Change image every 5 seconds
+    }
+
+    function stopSlideshow() {
+      if (slideInterval) {
+        clearInterval(slideInterval);
+      }
+    }
+
+    prevBtn.addEventListener("click", () => {
+      prevImage();
+      startSlideshow(); // Restart the slideshow after manual navigation
     });
 
     nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % images.length;
-      updateImage();
+      nextImage();
+      startSlideshow(); // Restart the slideshow after manual navigation
     });
 
     document.addEventListener("keydown", (event) => {
@@ -183,20 +200,15 @@
       }
     });
 
-    function showModal(title, description) {
-      document.getElementById("modal-title").innerText = title;
-      document.getElementById("modal-description").innerText = description;
-      document.getElementById("myModal").style.display = "block";
-    }
+    // Initialize the gallery with the first image and start the slideshow
+    updateImage();
+    startSlideshow();
 
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
+    // Optional: Pause slideshow on mouse enter and resume on mouse leave
+    const picturesContainer = document.querySelector(".pictures-container");
+    picturesContainer.addEventListener("mouseenter", stopSlideshow);
+    picturesContainer.addEventListener("mouseleave", startSlideshow);
 
-    window.onclick = function (event) {
-      if (event.target == document.getElementById("myModal")) {
-        closeModal();
-      }
-    };
+    // Rest of the JavaScript remains the same
   </script>
 </html>
