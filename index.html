@@ -9,7 +9,10 @@
   <body>
     <header>
       <div class="logo">
-        <img src="https://utfs.io/f/Gpb59x6yDgxICumO4x7jcQDRloqEAHU3gG7WzNkSm54Z2ebu" alt="NKU Data Science Club Logo">
+        <img
+          src="https://utfs.io/f/Gpb59x6yDgxICumO4x7jcQDRloqEAHU3gG7WzNkSm54Z2ebu"
+          alt="NKU Data Science Club Logo"
+        />
       </div>
       <nav>
         <ul>
@@ -24,18 +27,22 @@
     <section class="intro" id="home">
       <h2 class="intro-heading">About Us</h2>
       <p class="intro-text">
-        Welcome to the Data Science Club at Northern Kentucky University. We are a group of students who are passionate about data science and its applications. We meet regularly to discuss data science topics, work on projects, and learn from each other. Whether you are new to data science or an experienced practitioner, we welcome you to join us!
+        Welcome to the Data Science Club at Northern Kentucky University. We are
+        a group of students who are passionate about data science and its
+        applications. We meet regularly to discuss data science topics, work on
+        projects, and learn from each other. Whether you are new to data science
+        or an experienced practitioner, we welcome you to join us!
       </p>
     </section>
 
     <section class="pictures" id="pictures">
       <h1 class="pictures-heading">Gallery</h1>
       <div class="pictures-container">
-        <img id="galleryImage" src="images/1.jpg" alt="Gallery Image">
-        <img id="galleryImage" src="images/2.jpg" alt="Gallery Image">
-        <img id="galleryImage" src="images/3.jpg" alt="Gallery Image">  
-        <img id="galleryImage" src="images/4.jpg" alt="Gallery Image">
-        <img id="galleryImage" src="images/5.jpg" alt="Gallery Image">
+        <img id="galleryImage" src="images/1.jpg" alt="Gallery Image" />
+        <img id="galleryImage" src="images/2.jpg" alt="Gallery Image" />
+        <img id="galleryImage" src="images/3.jpg" alt="Gallery Image" />
+        <img id="galleryImage" src="images/4.jpg" alt="Gallery Image" />
+        <img id="galleryImage" src="images/5.jpg" alt="Gallery Image" />
         <div class="image-controls">
           <button id="prevBtn">&lt;</button>
           <button id="nextBtn">&gt;</button>
@@ -47,32 +54,63 @@
       <h1 class="project-heading">Project</h1>
       <div id="projects" class="projects-container">
         <div class="project-card">
-          <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/041/108/datas/gallery.jpg" alt="Project Image 1">
+          <img
+            src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/041/108/datas/gallery.jpg"
+            alt="Project Image 1"
+          />
           <h3>CourseNav</h3>
-          <p>Seamless Course Navigation for NKU: Empowering Students to Explore and Succeed.</p>
-          <button onclick="showModal('Project Title 1', 'Detailed description of Project 1')">Show More</button>
+          <p>
+            Seamless Course Navigation for NKU: Empowering Students to Explore
+            and Succeed.
+          </p>
+          <button
+            onclick="showModal('Project Title 1', 'Detailed description of Project 1')"
+          >
+            Show More
+          </button>
         </div>
         <div class="project-card">
-          <img src="image2.jpg" alt="Project Image 2">
+          <img src="image2.jpg" alt="Project Image 2" />
           <h3>Project Title 2</h3>
-          <p>Project description goes here. It provides a brief overview of the project.</p>
-          <button onclick="showModal('Project Title 2', 'Detailed description of Project 2')">Show More</button>
+          <p>
+            Project description goes here. It provides a brief overview of the
+            project.
+          </p>
+          <button
+            onclick="showModal('Project Title 2', 'Detailed description of Project 2')"
+          >
+            Show More
+          </button>
         </div>
         <div class="project-card">
-          <img src="image3.jpg" alt="Project Image 3">
+          <img src="image3.jpg" alt="Project Image 3" />
           <h3>Project Title 3</h3>
-          <p>Project description goes here. It provides a brief overview of the project.</p>
-          <button onclick="showModal('Project Title 3', 'Detailed description of Project 3')">Show More</button>
+          <p>
+            Project description goes here. It provides a brief overview of the
+            project.
+          </p>
+          <button
+            onclick="showModal('Project Title 3', 'Detailed description of Project 3')"
+          >
+            Show More
+          </button>
         </div>
         <div class="project-card">
-          <img src="image4.jpg" alt="Project Image 4">
+          <img src="image4.jpg" alt="Project Image 4" />
           <h3>Project Title 4</h3>
-          <p>Project description goes here. It provides a brief overview of the project.</p>
-          <button onclick="showModal('Project Title 4', 'Detailed description of Project 4')">Show More</button>
+          <p>
+            Project description goes here. It provides a brief overview of the
+            project.
+          </p>
+          <button
+            onclick="showModal('Project Title 4', 'Detailed description of Project 4')"
+          >
+            Show More
+          </button>
         </div>
       </div>
     </section>
-  
+
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -82,21 +120,24 @@
     </div>
 
     <section class="sisterorg" id="sisterorg">
-      <h1 class="sisterorg-heading">Sister Organizations</h1>
-      <p>Explore our sister organizations and their contributions.</p>
-      <button onclick="window.location.href='sisterorg.html'">Go to Sister Organizations</button>
+      <h1 class="sisterorg-heading">Check Out These Similar Organizations</h1>
+      <p>Explore some similar organizations at NKU.</p>
+      <button onclick="window.location.href='sisterorg.html'">
+        Similar Organizations
+      </button>
     </section>
 
     <section class="contact" id="contact">
       <h1 class="contact-heading">Contact</h1>
       <p class="contact-text">
-        If you have any questions or need help, please don't hesitate to contact us. We are always happy to help.
+        If you have any questions or need help, please don't hesitate to contact
+        us. We are always happy to help.
       </p>
       <form class="contact-form">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required />
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required />
         <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
         <button type="submit">Submit</button>
@@ -104,53 +145,58 @@
     </section>
 
     <footer>
-      <p>&copy; 2023 Data Science Club. All rights reserved.</p>
+      <p>&copy; 2024 Data Science Club. All rights reserved.</p>
     </footer>
-    
   </body>
   <script>
-    const images = ['images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg', 'images/5.jpg'];
+    const images = [
+      "images/1.jpg",
+      "images/2.jpg",
+      "images/3.jpg",
+      "images/4.jpg",
+      "images/5.jpg",
+    ];
     let currentIndex = 0;
-    const imageElement = document.getElementById('galleryImage');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
+    const imageElement = document.getElementById("galleryImage");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
     function updateImage() {
       imageElement.src = images[currentIndex];
     }
 
-    prevBtn.addEventListener('click', () => {
+    prevBtn.addEventListener("click", () => {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
       updateImage();
     });
 
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener("click", () => {
       currentIndex = (currentIndex + 1) % images.length;
       updateImage();
     });
 
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowLeft') {
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") {
         prevBtn.click();
-      } else if (event.key === 'ArrowRight') {
+      } else if (event.key === "ArrowRight") {
         nextBtn.click();
       }
     });
 
     function showModal(title, description) {
-      document.getElementById('modal-title').innerText = title;
-      document.getElementById('modal-description').innerText = description;
-      document.getElementById('myModal').style.display = "block";
+      document.getElementById("modal-title").innerText = title;
+      document.getElementById("modal-description").innerText = description;
+      document.getElementById("myModal").style.display = "block";
     }
 
     function closeModal() {
-      document.getElementById('myModal').style.display = "none";
+      document.getElementById("myModal").style.display = "none";
     }
 
-    window.onclick = function(event) {
-      if (event.target == document.getElementById('myModal')) {
+    window.onclick = function (event) {
+      if (event.target == document.getElementById("myModal")) {
         closeModal();
       }
-    }
+    };
   </script>
 </html>
