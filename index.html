@@ -10,7 +10,10 @@
   <body>
     <header>
       <div class="logo">
-        <img src="https://utfs.io/f/Gpb59x6yDgxICumO4x7jcQDRloqEAHU3gG7WzNkSm54Z2ebu" alt="NKU Data Science Club Logo">
+        <img
+          src="https://utfs.io/f/Gpb59x6yDgxICumO4x7jcQDRloqEAHU3gG7WzNkSm54Z2ebu"
+          alt="NKU Data Science Club Logo"
+        />
       </div>
       <nav>
         <ul>
@@ -73,32 +76,63 @@
       <h1 class="project-heading">Project</h1>
       <div id="projects" class="projects-container">
         <div class="project-card">
-          <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/041/108/datas/gallery.jpg" alt="Project Image 1">
+          <img
+            src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/003/041/108/datas/gallery.jpg"
+            alt="Project Image 1"
+          />
           <h3>CourseNav</h3>
-          <p>Seamless Course Navigation for NKU: Empowering Students to Explore and Succeed.</p>
-          <button onclick="showModal('Project Title 1', 'Detailed description of Project 1')">Show More</button>
+          <p>
+            Seamless Course Navigation for NKU: Empowering Students to Explore
+            and Succeed.
+          </p>
+          <button
+            onclick="showModal('Project Title 1', 'Detailed description of Project 1')"
+          >
+            Show More
+          </button>
         </div>
         <div class="project-card">
-          <img src="image2.jpg" alt="Project Image 2">
+          <img src="image2.jpg" alt="Project Image 2" />
           <h3>Project Title 2</h3>
-          <p>Project description goes here. It provides a brief overview of the project.</p>
-          <button onclick="showModal('Project Title 2', 'Detailed description of Project 2')">Show More</button>
+          <p>
+            Project description goes here. It provides a brief overview of the
+            project.
+          </p>
+          <button
+            onclick="showModal('Project Title 2', 'Detailed description of Project 2')"
+          >
+            Show More
+          </button>
         </div>
         <div class="project-card">
-          <img src="image3.jpg" alt="Project Image 3">
+          <img src="image3.jpg" alt="Project Image 3" />
           <h3>Project Title 3</h3>
-          <p>Project description goes here. It provides a brief overview of the project.</p>
-          <button onclick="showModal('Project Title 3', 'Detailed description of Project 3')">Show More</button>
+          <p>
+            Project description goes here. It provides a brief overview of the
+            project.
+          </p>
+          <button
+            onclick="showModal('Project Title 3', 'Detailed description of Project 3')"
+          >
+            Show More
+          </button>
         </div>
         <div class="project-card">
-          <img src="image4.jpg" alt="Project Image 4">
+          <img src="image4.jpg" alt="Project Image 4" />
           <h3>Project Title 4</h3>
-          <p>Project description goes here. It provides a brief overview of the project.</p>
-          <button onclick="showModal('Project Title 4', 'Detailed description of Project 4')">Show More</button>
+          <p>
+            Project description goes here. It provides a brief overview of the
+            project.
+          </p>
+          <button
+            onclick="showModal('Project Title 4', 'Detailed description of Project 4')"
+          >
+            Show More
+          </button>
         </div>
       </div>
     </section>
-  
+
     <div id="myModal" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
@@ -108,6 +142,11 @@
     </div>
 
     <section class="sisterorg" id="sisterorg">
+      <h1 class="sisterorg-heading">Check Out These Similar Organizations</h1>
+      <p>Explore some similar organizations at NKU.</p>
+      <button onclick="window.location.href='https://sister-clubs.vercel.app/'">
+        Similar Organizations
+      </button>
       <h1 class="sisterorg-heading">Discover More</h1>
       <p>Explore our sister organizations and their contributions.</p>
       <button onclick="window.location.href='sisterorg.html'">Go to Sister Organizations</button>
@@ -116,28 +155,27 @@
    
 
     <footer>
-      <p>&copy; 2023 Data Science Club. All rights reserved.</p>
+      <p>&copy; 2024 Data Science Club. All rights reserved.</p>
     </footer>
-    
   </body>
   <script>
     
 
     function showModal(title, description) {
-      document.getElementById('modal-title').innerText = title;
-      document.getElementById('modal-description').innerText = description;
-      document.getElementById('myModal').style.display = "block";
+      document.getElementById("modal-title").innerText = title;
+      document.getElementById("modal-description").innerText = description;
+      document.getElementById("myModal").style.display = "block";
     }
 
     function closeModal() {
-      document.getElementById('myModal').style.display = "none";
+      document.getElementById("myModal").style.display = "none";
     }
 
-    window.onclick = function(event) {
-      if (event.target == document.getElementById('myModal')) {
+    window.onclick = function (event) {
+      if (event.target == document.getElementById("myModal")) {
         closeModal();
       }
-    }
+    };
 
     const wrapper = document.querySelector('.gallery-wrapper');
 const prevBtn = document.getElementById('prevBtn');
