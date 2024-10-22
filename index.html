@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Data Science Club NKU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   </head>
   <body>
     <header>
@@ -22,20 +23,45 @@
     </header>
 
     <section class="intro" id="home">
-      <h2 class="intro-heading">About Us</h2>
-      <p class="intro-text">
-        Welcome to the Data Science Club at Northern Kentucky University. We are a group of students who are passionate about data science and its applications. We meet regularly to discuss data science topics, work on projects, and learn from each other. Whether you are new to data science or an experienced practitioner, we welcome you to join us!
-      </p>
+      <div class="about-content">
+        <h2 class="intro-heading">About Us</h2>
+        <p class="intro-text">
+          The IU Data Science Club provides a forum for IU students to develop hands-on skills in data science and analysis. The DSC community consists of faculty and graduates at Indiana University Bloomington.
+          <br><br>
+          The Data Science Club hosts various events. Check out some upcoming events below!
+        </p>
+      </div>
+    
+      <div class="contact-content">
+        <h2 class="contact-heading">Contact Us</h2>
+        <ul class="contact-list">
+            <li class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:baralg1@nku.edu">baralg1@nku.edu</a>
+            </li>
+            <li class="contact-item">
+                <i class="fa-brands fa-discord"></i>
+                <a href="https://discord.gg/7sJMSZEUGn">@dscNKU</a>
+            </li>
+            <li class="contact-item">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/nku_data_science_club/">@nku_data_science_club</a>
+            </li>
+        </ul>
+    </div>
+     
     </section>
 
     <section class="pictures" id="pictures">
       <h1 class="pictures-heading">Gallery</h1>
       <div class="pictures-container">
-        <img id="galleryImage" src="images/1.jpg" alt="Gallery Image">
-        <img id="galleryImage" src="images/2.jpg" alt="Gallery Image">
-        <img id="galleryImage" src="images/3.jpg" alt="Gallery Image">  
-        <img id="galleryImage" src="images/4.jpg" alt="Gallery Image">
-        <img id="galleryImage" src="images/5.jpg" alt="Gallery Image">
+        <div class="gallery-wrapper">
+          <img id="galleryImage" src="https://utfs.io/f/Wg4zPKBYwGoPxCvwXe5gGS2N7ndJft5rlsEaHcVbq8O6C4mz" alt="Gallery Image">
+          <img id="galleryImage" src="https://utfs.io/f/Wg4zPKBYwGoPIGgfswf1Glpru0WHJ57seOgk9dTiC8SL3UAZ" alt="Gallery Image">
+          <img id="galleryImage" src="https://utfs.io/f/Wg4zPKBYwGoPdJUMpKsaW2N6nqZyVtlbx3HFv9Br1dkmYw4A" alt="Gallery Image">  
+          <img id="galleryImage" src="https://utfs.io/f/Wg4zPKBYwGoPclk0yTD163QDC7GXO0iPRTYtBpaqgEbNJ5v4" alt="Gallery Image">
+          <img id="galleryImage" src="https://utfs.io/f/Wg4zPKBYwGoPXtKMB4bJTB2fS75zj9UA8GHE0V6ZkpMnPLqR" alt="Gallery Image">
+        </div>
         <div class="image-controls">
           <button id="prevBtn">&lt;</button>
           <button id="nextBtn">&gt;</button>
@@ -82,26 +108,12 @@
     </div>
 
     <section class="sisterorg" id="sisterorg">
-      <h1 class="sisterorg-heading">Sister Organizations</h1>
+      <h1 class="sisterorg-heading">Discover More</h1>
       <p>Explore our sister organizations and their contributions.</p>
       <button onclick="window.location.href='sisterorg.html'">Go to Sister Organizations</button>
     </section>
 
-    <section class="contact" id="contact">
-      <h1 class="contact-heading">Contact</h1>
-      <p class="contact-text">
-        If you have any questions or need help, please don't hesitate to contact us. We are always happy to help.
-      </p>
-      <form class="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
+   
 
     <footer>
       <p>&copy; 2023 Data Science Club. All rights reserved.</p>
@@ -109,33 +121,7 @@
     
   </body>
   <script>
-    const images = ['images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.jpg', 'images/5.jpg'];
-    let currentIndex = 0;
-    const imageElement = document.getElementById('galleryImage');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-
-    function updateImage() {
-      imageElement.src = images[currentIndex];
-    }
-
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex - 1 + images.length) % images.length;
-      updateImage();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex + 1) % images.length;
-      updateImage();
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowLeft') {
-        prevBtn.click();
-      } else if (event.key === 'ArrowRight') {
-        nextBtn.click();
-      }
-    });
+    
 
     function showModal(title, description) {
       document.getElementById('modal-title').innerText = title;
@@ -152,5 +138,34 @@
         closeModal();
       }
     }
+
+    const wrapper = document.querySelector('.gallery-wrapper');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const images = document.querySelectorAll('#galleryImage');
+let currentIndex = 0;
+
+function updateGallery() {
+  const imageWidth = wrapper.querySelector('#galleryImage').offsetWidth;
+  const gap = 20; // matches the gap in CSS
+  wrapper.style.transform = `translateX(-${(imageWidth + gap) * currentIndex}px)`;
+}
+
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    updateGallery();
+  }
+});
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < images.length - 3) {
+    currentIndex++;
+    updateGallery();
+  }
+});
+
+// Update gallery on window resize
+window.addEventListener('resize', updateGallery);
   </script>
 </html>
