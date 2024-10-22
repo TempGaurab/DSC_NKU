@@ -1,314 +1,460 @@
 /* NKU Data Science Club CSS */
 
 :root {
-    --nku-gold: #C8A742;
-    --nku-black: #000000;
-    --nku-white: #FFFFFF;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--nku-white);
-    color: var(--nku-black);
-  }
-  
-  header {
-    background-color: #001f3f;
-    color: var(--nku-white);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo img {
-    max-height: 60px;
-  }
-  
-  nav {
-    flex-grow: 1;
-    text-align: center;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav a {
-    color: var(--nku-white);
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: var(--nku-gold);
-  }
-  
-  .intro {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-  }
-  
-  .about-content, .contact-content {
-    flex: 1;
-  }
-  
-  .intro-heading, .contact-heading {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: var(--nku-gold);
-  }
-  
-  .intro-text {
-    line-height: 1.6;
-  }
-  
-  .contact-content {
-    padding: 20px;
+  --nku-gold: #C8A742;
+  --nku-black: #000000;
+  --nku-white: #FFFFFF;
+  --primary-color: #333;
+  --secondary-color: #666;
+  --spacing-lg: 40px;
+  --spacing-md: 20px;
+  --spacing-sm: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--nku-white);
+  color: var(--nku-black);
+}
+
+header {
+  background-color: #001f3f;
+  color: var(--nku-white);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 60px;
+}
+
+.logo {
+  display: flex;
+  gap: 1rem;
+  align-items: center
+}
+
+.logo p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav {
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--nku-white);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--nku-gold);
+}
+
+/* Common Section Styles */
+section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.about-content, .contact-content {
+  flex: 1;
+}
+
+.intro-heading, .contact-heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--nku-gold);
+}
+
+.intro-text {
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-content {
+  padding: 20px;
 }
 
 .contact-heading {
-    font-size: 24px;
-    margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .contact-list {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .contact-item {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .contact-item i {
-    width: 20px;
-    margin-right: 10px;
+  width: 20px;
+  margin-right: 10px;
 }
 
 .contact-item a {
-    margin-left: 10px;
-    text-decoration: none;
-    color: inherit;
+  margin-left: 10px;
+  text-decoration: none;
+  color: inherit;
 }
-  
-  @media (max-width: 768px) {
-    .intro {
+
+/* Events Section */
+.events {
+  background-color: #f9f9f9;
+  padding: var(--spacing-lg) 0;
+}
+
+.events-heading {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--nku-gold);
+  text-align: center;
+}
+
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.event-card {
+  background: var(--nku-white);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-title {
+  font-size: 18px;
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary-color);
+}
+
+.event-date, .event-location {
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* E-Board Section */
+.eboard {
+  padding: var(--spacing-lg) 0;
+}
+
+.eboard-heading {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--nku-gold);
+  text-align: center;
+}
+
+.eboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.member-card {
+  text-align: center;
+  padding: var(--spacing-md);
+  transition: transform 0.2s;
+  background: var(--nku-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+.member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: var(--spacing-sm);
+  object-fit: cover;
+}
+
+.member-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+.member-position {
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.member-email {
+  color: var(--secondary-color);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.member-email:hover {
+  text-decoration: underline;
+  color: var(--nku-gold);
+}
+
+/* Pictures Section */
+.pictures {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pictures-heading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: var(--nku-gold);
+}
+
+.pictures-container {
+  position: relative;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+.gallery-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  gap: 20px;
+}
+
+#galleryImage {
+  width: calc((100% - 40px) / 3);
+  height: 300px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.image-controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+#prevBtn,
+#nextBtn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  pointer-events: auto;
+  transition: background 0.3s;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#prevBtn {
+  margin-left: 10px;
+}
+
+#nextBtn {
+  margin-right: 10px;
+}
+
+/* Projects Section */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.project-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.project-card h3 {
+  margin: 16px 0 8px;
+}
+
+.project-card p {
+  margin: 0 0 16px;
+}
+
+.project-card button {
+  background-color: var(--nku-gold);
+  color: var(--nku-black);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.project-card button:hover {
+  background-color: #b59339;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: var(--nku-white);
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--nku-black);
+  text-decoration: none;
+}
+
+/* Sister Organization Section */
+.sisterorg {
+  background-color: #001f3f;
+  color: var(--nku-white);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.sisterorg-heading {
+  color: var(--nku-gold);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sisterorg p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.sisterorg button {
+  background-color: var(--nku-gold);
+  color: var(--nku-black);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sisterorg button:hover {
+  background-color: var(--nku-white);
+  color: var(--nku-black);
+}
+
+/* Footer */
+footer {
+  background-color: var(--nku-black);
+  color: var(--nku-white);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro {
       flex-direction: column;
-    }
-  }
-  
-  .pictures {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
   }
 
-  .pictures-heading {
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2.5rem;
+  .events-container, 
+  .eboard-container {
+      grid-template-columns: 1fr;
   }
 
-  .pictures-container {
-    position: relative;
-    overflow: hidden;
-    padding: 0 40px;
-  }
-
-  .gallery-wrapper {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    gap: 20px;
-  }
-
-  #galleryImage {
-    width: calc((100% - 40px) / 3);
-    height: 300px;
-    object-fit: cover;
-    flex-shrink: 0;
-  }
-
-  .image-controls {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-  }
-
-  #prevBtn,
-  #nextBtn {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    cursor: pointer;
-    font-size: 18px;
-    pointer-events: auto;
-    transition: background 0.3s;
-  }
-
-  #prevBtn:hover,
-  #nextBtn:hover {
-    background: rgba(0, 0, 0, 0.8);
-  }
-
-  #prevBtn {
-    margin-left: 10px;
-  }
-
-  #nextBtn {
-    margin-right: 10px;
-  }
-  
-
-  .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-  .project-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 16px;
-    margin: 16px;
-    width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  .project-card img {
-    width: 100%;
-    border-radius: 8px 8px 0 0;
-  }
-  .project-card h3 {
-    margin: 16px 0 8px;
-  }
-  .project-card p {
-    margin: 0 0 16px;
-  }
-  .project-card button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .project-card button:hover {
-    background-color: #0056b3;
-  }
-
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-  }
-  .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 8px;
+  section {
+      padding: 1rem;
   }
 
   .sisterorg {
-    background-color: #001f3f;
-    color: var(--nku-white);
-    padding: 3rem 2rem;
-    text-align: center;
-  }
-  
-  .sisterorg-heading {
-    color: var(--nku-gold);
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .sisterorg p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .sisterorg button {
-    background-color: var(--nku-gold);
-    color: var(--nku-black);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
-  .sisterorg button:hover {
-    background-color: var(--nku-white);
-    color: var(--nku-black);
-  }
-  
-
-  @media (max-width: 768px) {
-    .sisterorg {
       padding: 2rem 1rem;
-    }
-  
-    .sisterorg-heading {
+  }
+
+  .sisterorg-heading {
       font-size: 2rem;
-    }
-  
-    .sisterorg p {
+  }
+
+  .sisterorg p {
       font-size: 1rem;
-    }
-  
-    .sisterorg button {
+  }
+
+  .sisterorg button {
       padding: 0.6rem 1.2rem;
       font-size: 0.9rem;
-    }
   }
-
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  
-  footer {
-    background-color: var(--nku-black);
-    color: var(--nku-white);
-    text-align: center;
-    padding: 1rem;
-  }
-
+}
