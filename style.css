@@ -310,12 +310,26 @@ section {
 }
 
 .project-card {
+  position: relative;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 16px;
   margin: 16px;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.status-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 40px;
+  background-color: #C8A742;
+  border-radius: 0 0 0 4px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+.status-label:hover {
+  height: 36px;
 }
 
 .name-list {
@@ -362,6 +376,7 @@ section {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 
 .project-card button:hover {
   background-color: #b59339;
