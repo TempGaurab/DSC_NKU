@@ -342,7 +342,7 @@ section {
 .name-item {
   padding: 12px;
   margin: 8px 0;
-  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  background: linear-gradient(to right, #f8f9fa, #ecefe9);
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   transition: transform 0.2s;
@@ -383,7 +383,7 @@ section {
 }
 
         .message-box {
-            background: linear-gradient(135deg, #9e9510, #318591);
+            background: linear-gradient(135deg, #ebe58d, #f800a5);
             padding: 1rem 2rem;
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
