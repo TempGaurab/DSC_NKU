@@ -367,22 +367,60 @@ section {
   background-color: #b59339;
 }
 
-.message-box {
-  width: 100%; /* Full width */
-  background-color: #f9f9f9; /* Light background color */
-  border: 1px solid #ccc; /* Subtle border */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Spacing inside the box */
-  margin: 20px 0; /* Space above and below */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  font-family: Arial, sans-serif; /* Font style */
-}
+        .message-box {
+            background: linear-gradient(135deg, #9e9510, #318591);
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 600px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-.message-box p {
-  margin: 0; /* Remove default margin */
-  color: #333; /* Darker text color */
-  line-height: 1.5; /* Better line spacing */
-}
+        .message-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .message-box p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: rgb(49, 38, 0);
+            font-weight: bolder;
+            font-size: 1.1rem;
+        }
+
+        .register-btn {
+            background-color: white;
+            color: #535242;
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+
+        .register-btn:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 640px) {
+            .message-box {
+                margin: 1rem;
+                padding: 0.75rem 1rem;
+            }
+
+            .message-box p {
+                font-size: 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
 
 /* Modal Styles */
 .modal {
