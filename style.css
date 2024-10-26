@@ -473,6 +473,12 @@ section {
   color: var(--nku-black);
   text-decoration: none;
 }
+.name-item a {
+  text-decoration: none;
+  color: inherit; /* Inherit the color from the parent .name-item */
+  font-weight: inherit; /* Inherit font weight */
+  font-size: inherit; /* Inherit font size */
+}
 
 /* Sister Organization Section */
 .sisterorg {
