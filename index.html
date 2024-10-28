@@ -451,12 +451,13 @@
     </div>
   `;
     }
+
     function initializeProjects() {
       const projectsGrid = document.getElementById("projectsGrid");
       const showMoreButton = document.getElementById("showMoreButton");
 
       // Add all projects to the grid
-      projects.forEach((project, index) => {
+      projects.forEach((project) => {
         const projectHTML = createProjectCard(project);
         projectsGrid.insertAdjacentHTML("beforeend", projectHTML);
       });
@@ -469,10 +470,26 @@
         }
       });
 
-      // Show More button click handler
+      // Track the state of visibility
+      let showingAll = false;
+
+      // Show More / Show Less button click handler
       showMoreButton.addEventListener("click", () => {
-        projectCards.forEach((card) => card.classList.add("visible"));
-        showMoreButton.style.display = "none";
+        if (showingAll) {
+          // Hide all but the first 3
+          projectCards.forEach((card, index) => {
+            if (index >= 3) {
+              card.classList.remove("visible");
+            }
+          });
+          showMoreButton.textContent = "Show More Projects";
+        } else {
+          // Show all project cards
+          projectCards.forEach((card) => card.classList.add("visible"));
+          showMoreButton.textContent = "Show Less Projects";
+          projectsGrid.scrollIntoView({ behavior: "smooth" });
+        }
+        showingAll = !showingAll; // Toggle state
       });
     }
 
