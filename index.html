@@ -483,11 +483,11 @@
             }
           });
           showMoreButton.textContent = "Show More Projects";
+          projectsGrid.scrollIntoView({ behavior: "smooth" });
         } else {
           // Show all project cards
           projectCards.forEach((card) => card.classList.add("visible"));
           showMoreButton.textContent = "Show Less Projects";
-          projectsGrid.scrollIntoView({ behavior: "smooth" });
         }
         showingAll = !showingAll; // Toggle state
       });
