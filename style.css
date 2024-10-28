@@ -302,85 +302,162 @@ section {
   margin-right: 10px;
 }
 
-/* Projects Section */
-.projects-container {
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* Container for the project grid */
+.projects-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 20px; /* Space between project cards */
+  justify-content: space-between; /* Space out the items */
+  margin-bottom: 30px; /* Space below the grid */
 }
 
+/* Individual project card styling */
 .project-card {
-  position: relative;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 16px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.status-label {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 10px;
-  height: 40px;
-  background-color: #C8A742;
-  border-radius: 0 0 0 4px;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-}
-.status-label:hover {
-  height: 36px;
+  flex: 0 0 calc(33.333% - 20px); /* Adjust for three cards in a row */
+  border: 1px solid #e0e0e0; /* Light grey border */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensure content doesn't overflow */
+  background: white; /* Card background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+  display: none; /* Initially hidden, show based on logic */
+  min-width: 300px; /* Minimum width for responsive design */
 }
 
-.name-list {
-  list-style: none;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  max-width: 300px;
+.project-card.visible {
+  display: block; /* Show card when visible class is applied */
 }
 
-.name-item {
-  padding: 12px;
-  margin: 8px 0;
-  background: linear-gradient(to right, #f8f9fa, #ecefe9);
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-  cursor: pointer;
+/* Hover effects for project cards */
+.project-card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
-.name-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* Styling for project images */
+.project-image {
+  width: 100%;          /* Make the image fill the width of the card */
+  height: 200px;       /* Set a fixed height for consistency */
+  object-fit: cover;   /* Ensure the image covers the area without stretching */
 }
 
-.project-card img {
-  width: 100%;
-  border-radius: 8px 8px 0 0;
+/* Content area within project card */
+.project-content {
+  padding: 20px; /* Padding around content */
 }
 
-.project-card h3 {
-  margin: 16px 0 8px;
+/* Title styling */
+.project-title {
+  font-size: 1.5rem; /* Larger font for titles */
+  margin-bottom: 10px; /* Space below title */
+  color: #333; /* Darker text color */
 }
 
-.project-card p {
-  margin: 0 0 16px;
+/* Description styling */
+.project-description {
+  color: #666; /* Lighter text for descriptions */
+  margin-bottom: 15px; /* Space below description */
+  line-height: 1.5; /* Improved readability */
 }
 
-.project-card button {
-  background-color: var(--nku-gold);
-  color: var(--nku-black);
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+/* Team section styling */s
+.team-section {
+  margin-top: 15px; /* Space above team section */
 }
 
-
-.project-card button:hover {
-  background-color: #b59339;
+.team-title {
+  padding-left: 20px;
+  font-weight: bold; /* Bold for emphasis */
+  margin-bottom: 8px; /* Space below team title */
+  color: #333; /* Dark text color */
 }
+
+/* List styling for team members */
+.team-list {
+  padding-left: 20px;
+  list-style: none; /* Remove default list styling */
+  font-family: 'Arial', sans-serif; /* Set font */
+  max-width: 300px; /* Set maximum width */
+}
+
+/* Individual team member styling */
+.team-member {
+  padding: 12px; /* Add padding for items */
+  margin: 8px 0; /* Vertical margin between items */
+  background: linear-gradient(to right, #f8f9fa, #ecefe9); /* Gradient background */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  transition: transform 0.2s; /* Smooth transform transition */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.team-member a {
+  color: #000000; /* Link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.team-member:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Button styling for project actions */
+.project-button {
+  background-color: var(--nku-gold); /* Primary button color */
+  color: var(--nku-black); /* Text color */
+  border: none; /* No border */
+  padding: 8px 16px; /* Padding for button */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-decoration: none; /* No underline */
+  transition: background-color 0.3s; /* Smooth background transition */
+  align-items: center; /* Center content */
+}
+
+.project-button:hover {
+  background-color: #e1ae14; /* Darken on hover */
+}
+
+/* Show more button container */
+.show-more-container {
+  text-align: center; /* Center content */
+  margin-top: 20px; /* Space above the container */
+}
+
+/* Show more button styling */
+.show-more-button {
+  padding: 10px 30px; /* Padding for button */
+  background-color: var(--nku-gold); /* Primary button color */
+  color: rgb(0, 0, 0); /* Text color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.2s; /* Smooth hover effect */
+}
+
+.show-more-button:hover {
+  background-color: #1d4ed8; /* Darken on hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1024px) {
+  .project-card {
+    flex: 0 0 calc(50% - 10px); /* Two cards in a row on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card {
+    flex: 0 0 100%; /* Full width for cards on mobile */
+  }
+}
+
+/* Styling for the message box */
 
         .message-box {
             background: linear-gradient(135deg, #ebe58d, #f800a5);
