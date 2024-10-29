@@ -301,7 +301,9 @@
         updateGallery();
       }
     });
-
+    /*
+      In projects add new projects.
+      */
     const projects = [
       {
         title: "CourseNav",
@@ -427,34 +429,50 @@
           },
         ],
       },
+      {
+        title: "Ask Me",
+        image:
+          "https://utfs.io/f/Gpb59x6yDgxIz4SjIBmc5aV2BWeXxrPU3Y6nRs4hdTEG7Jui",
+        description:
+          "Ask Me is a mock interview portal designed to elevate your interview prep. Just provide the job details, and it will generate five customized questions for you. After you respond, it rates your answers, gives instant feedback, and even provides preferred responses to help you improve. 🎯",
+        link: "https://ask-me-delta-ten.vercel.app/",
+        team: [
+          {
+            name: "Smaran Bhattarai",
+            linkedin: "https://www.linkedin.com/in/smaranbhattarai/",
+          },
+        ],
+      },
     ];
     function createProjectCard(project) {
       return `
-    <div class="project-card">
-      <img src="${project.image}" alt="${project.title}" class="project-image">
-      <div class="project-content">
-        <h2 class="project-title">${project.title}</h2>
-        <p class="project-description">${project.description}</p>
-        <a href="${
-          project.link
-        }" target="_blank" class="project-button">View Details</a>
+      <div class="project-card">
+        <img src="${project.image}" alt="${
+        project.title
+      }" class="project-image">
+        <div class="project-content">
+          <h2 class="project-title">${project.title}</h2>
+          <p class="project-description">${project.description}</p>
+          <a href="${
+            project.link
+          }" target="_blank" class="project-button">View Details</a>
+        </div>
+        <div class="team-section">
+          <h3 class="team-title">Built By:</h3>
+          <ul class="team-list">
+            ${project.team
+              .map(
+                (member) => `
+                  <li class="team-member">
+                    <a href="${member.linkedin}" target="_blank">${member.name}</a>
+                  </li>
+                `
+              )
+              .join("")}
+          </ul>
+        </div>
       </div>
-      <div class="team-section">
-        <h3 class="team-title">Built By:</h3>
-        <ul class="team-list">
-          ${project.team
-            .map(
-              (member) => `
-                <li class="team-member">
-                  <a href="${member.linkedin}" target="_blank">${member.name}</a>
-                </li>
-              `
-            )
-            .join("")}
-        </ul>
-      </div>
-    </div>
-  `;
+    `;
     }
 
     function initializeProjects() {
