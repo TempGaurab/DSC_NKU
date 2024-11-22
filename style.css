@@ -667,3 +667,16 @@ footer {
   text-decoration: none;
 }
 }
+
+#datathon-link {
+  text-decoration: underline; /* Underline to resemble a link */
+  color: #f6fe5e; /* Standard blue link color */
+  font-weight: bold;
+  font-size: 16px; /* Slightly larger font size */
+  font-family: Arial, sans-serif; /* Clean font */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+#datathon-link:hover {
+  color: #f9f9f9; /* Darker blue on hover */
+}
