@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Powerpoints</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #001f3f;
+        padding: 10px 20px;
+        color: white;
+      }
+      footer {
+        background-color: var(--nku-black);
+        color: var(--nku-white);
+        text-align: center;
+        padding: 1rem;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      .logo img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      .logo h1 {
+        color: #ffc72c;
+      }
+      .nav-buttons {
+        display: flex;
+        align-items: center;
+      }
+      .back-button,
+      .external-link {
+        background-color: #ffc72c;
+        border: none;
+        color: #001f3f;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        align-items: center;
+        font-size: 16px;
+        margin: 4px 8px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 4px;
+      }
+      .external-link {
+        background-color: white;
+        display: inline;
+        margin: 0px;
+      }
+      .external-link img {
+        width: 20px;
+        height: 20px;
+        margin-right: 2px;
+      }
+
+      .presentations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .presentation-card {
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: all 0.2s ease;
+      }
+      .presentation-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .presentation-image {
+        width: 100%;
+        height: 200px;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      .presentation-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .download-icon {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 5px;
+        border-radius: 4px;
+        font-size: 24px;
+      }
+      .author-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .author {
+        color: #666;
+        font-size: 0.9em;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .author::before {
+        content: "👤";
+      }
+      .linkedin-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background-color: #0077b5;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-size: 0.9em;
+        transition: background-color 0.2s ease;
+      }
+      .linkedin-button:hover {
+        background-color: #005885;
+      }
+      .linkedin-icon {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+      }
+      h2 {
+        margin: 0;
+        color: #333;
+        font-size: 1.2em;
+      }
+      .file-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+        font-size: 0.8em;
+        color: #666;
+      }
+      .file-type {
+        background: #f0f0f0;
+        padding: 3px 8px;
+        border-radius: 4px;
+      }
+      .download-link {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+      }
+      .intro {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .intro p {
+        color: #444;
+        line-height: 1.6;
+        margin: 0;
+      }
+      .intro .date {
+        color: #666;
+        font-style: italic;
+        margin-top: 10px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="https://utfs.io/f/Gpb59x6yDgxICumO4x7jcQDRloqEAHU3gG7WzNkSm54Z2ebu"
+          alt="Logo"
+        />
+        <h1>NKU Data Science Club</h1>
+      </div>
+      <a href="https://dsc-nku.vercel.app" class="back-button">Go Back</a>
+    </nav>
+
+    <h1>Featured Presentations</h1>
+    <div class="intro">
+      <p>
+        Following are the powerpoint presentations of three different workshops
+        held on Griffin Hall at
+        <a href="https://victor-hacks-nku.devpost.com/"
+          >VictorHacks Datathon.</a
+        >
+      </p>
+      <span class="date">November 22, 2024</span>
+    </div>
+    <div class="presentations-grid">
+      <div class="presentation-card">
+        <a
+          href="https://utfs.io/f/Gpb59x6yDgxIb8Z4QvW3e0UTrRAOMwZvN8fcpGC5jKb4kHnW"
+          class="download-link"
+        >
+          <div class="presentation-image">
+            <img
+              src="https://utfs.io/f/Gpb59x6yDgxIaVmJwpsfXQgOpDvkrMz6J3n52sRdwHhibPCU"
+              alt="AI Technology Presentation"
+            />
+            <span class="download-icon">⬇️</span>
+          </div>
+          <h2>All about AI technology</h2>
+        </a>
+        <div class="author-section">
+          <p class="author">By Anudeep Bathina</p>
+          <a
+            href="https://www.linkedin.com/in/anudeepsri/"
+            target="_blank"
+            class="linkedin-button"
+          >
+            <svg class="linkedin-icon" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="file-info">
+          <span class="file-type">PPTX</span>
+        </div>
+      </div>
+
+      <div class="presentation-card">
+        <a
+          href="https://utfs.io/f/Gpb59x6yDgxIhZXpQvNuvcf4COnHSIjMYkxoXlEq30D2r1Bz"
+          class="download-link"
+        >
+          <div class="presentation-image">
+            <img
+              src="https://utfs.io/f/Gpb59x6yDgxIFBPIsMv3ZzsxyjeHRvGdBkIYMo2U7baurCAc"
+              alt="Cloud and Big Data Presentation"
+            />
+            <span class="download-icon">⬇️</span>
+          </div>
+          <h2>Cloud and Big Data</h2>
+        </a>
+        <div class="author-section">
+          <p class="author">By Aaditya Khanal</p>
+          <a
+            href="https://www.linkedin.com/in/-khanalaaditya/"
+            target="_blank"
+            class="linkedin-button"
+          >
+            <svg class="linkedin-icon" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="file-info">
+          <span class="file-type">PPTX</span>
+        </div>
+      </div>
+
+      <div class="presentation-card">
+        <a
+          href="https://utfs.io/f/Gpb59x6yDgxIpXU1uYt8falThVnwgyStirEvOuZ0P5QecWAp"
+          class="download-link"
+        >
+          <div class="presentation-image">
+            <img
+              src="https://utfs.io/f/Gpb59x6yDgxIKDuPntchj4lQuk3zpmAd2Ewr0LtZeiThCcF5"
+              alt="RAG Agents Presentation"
+            />
+            <span class="download-icon">⬇️</span>
+          </div>
+          <h2>RAG Agents</h2>
+        </a>
+        <div class="author-section">
+          <p class="author">By Sushant Shrestha</p>
+          <a
+            href="https://www.linkedin.com/in/sushant-shrestha-b51785228/"
+            target="_blank"
+            class="linkedin-button"
+          >
+            <svg class="linkedin-icon" viewBox="0 0 24 24">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+        <div class="file-info">
+          <span class="file-type">PPTX</span>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 Data Science Club. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
