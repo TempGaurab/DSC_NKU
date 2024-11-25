@@ -404,6 +404,9 @@ section {
 .team-member:hover {
   text-decoration: underline; /* Underline on hover */
 }
+#datathon-text{
+  color: #f6fe5e;
+}
 
 /* Button styling for project actions */
 .project-button {
@@ -460,7 +463,7 @@ section {
 /* Styling for the message box */
 
         .message-box {
-            background: linear-gradient(135deg, #ebe58d, #f800a5);
+            background: linear-gradient(135deg, #61c9e8, #df7cbe);
             padding: 1rem 2rem;
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
